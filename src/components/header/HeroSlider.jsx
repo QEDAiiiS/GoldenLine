@@ -29,7 +29,7 @@ export default function HeroSlider() {
                 <p >Windows Xp/10/7/8 Ps3, Tv Box</p>
                 <Link to={'/'} className="btn">Shop Now</Link>
             </div>
-            <img src="/src/img/banner_Hero1.jpg" alt="Hero Slider 1" />
+            <img src="/public/img/banner_Hero1.jpg" alt="Hero Slider 1" />
           </SwiperSlide>
 
           <SwiperSlide>
@@ -39,7 +39,7 @@ export default function HeroSlider() {
                 <p>Windows Xp/10/7/8 Ps3, Tv Box</p>
                 <Link to={'/'} className="btn">Shop Now</Link>
             </div>
-            <img src="/src/img/banner_Hero2.jpg" alt="Hero Slider 1" />
+            <img src="/public/img/banner_Hero2.jpg" alt="Hero Slider 1" />
           </SwiperSlide>
 
           <SwiperSlide>
@@ -49,7 +49,7 @@ export default function HeroSlider() {
                 <p>Windows Xp/10/7/8 Ps3, Tv Box</p>
                 <Link to={'/'} className="btn">Shop Now</Link>
             </div>
-            <img src="/src/img/banner_Hero3.jpg" alt="Hero Slider 1" />
+            <img src="/public/img/banner_Hero3.jpg" alt="Hero Slider 1" />
           </SwiperSlide>
 
 
