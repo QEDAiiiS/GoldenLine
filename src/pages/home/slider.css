@@ -1,0 +1,35 @@
+/*? content absolute top-[50%] transform translate-y-[-50%] left-[5%] */
+/*? uppercase text-[1vw] italic font-normal mb-[0.4vw] */
+/*? text-[3vw] capitalize mb-[30px] text-[var(--main_color)] font-bold */
+/*? text-[1.1vw] my-[2vw]  */
+
+
+  .content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+  }
+
+  .content h4{
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 0.4vw;
+  }
+
+  .content h3{
+    font-size: 3vw;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    color:  var(--main_color);
+    font-weight: bolder;
+    line-height: 1.1;
+  }
+
+  .content p{
+    font-size: 1.1vw;
+    margin: 2.2vw 0;
+  }
+  
