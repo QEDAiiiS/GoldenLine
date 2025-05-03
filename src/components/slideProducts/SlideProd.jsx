@@ -24,7 +24,7 @@ export default function SlideProduct({title}) {
             <div className="product-slider">
 
           <Swiper
-        //    autoplay={{delay: 2500,disableOnInteraction: false, }}
+           autoplay={{delay: 2500,disableOnInteraction: false, }}
            loop={true}
             slidesPerView={5}
              navigation={true}
