@@ -1,3 +1,8 @@
+import slide1 from '/img/banner_Hero1.jpg'
+import slide2 from '/img/banner_Hero2.jpg'
+import slide3 from '/img/banner_Hero3.jpg'
+
+
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -29,7 +34,7 @@ export default function HeroSlider() {
                 <p >Windows Xp/10/7/8 Ps3, Tv Box</p>
                 <Link to={'/'} className="btn">Shop Now</Link>
             </div>
-            <img src="/public/img/banner_Hero1.jpg" alt="Hero Slider 1" />
+            <img src={slide1} alt="Hero Slider 1" />
           </SwiperSlide>
 
           <SwiperSlide>
@@ -39,7 +44,7 @@ export default function HeroSlider() {
                 <p>Windows Xp/10/7/8 Ps3, Tv Box</p>
                 <Link to={'/'} className="btn">Shop Now</Link>
             </div>
-            <img src="/public/img/banner_Hero2.jpg" alt="Hero Slider 1" />
+            <img src={slide2} alt="Hero Slider 1" />
           </SwiperSlide>
 
           <SwiperSlide>
@@ -49,7 +54,7 @@ export default function HeroSlider() {
                 <p>Windows Xp/10/7/8 Ps3, Tv Box</p>
                 <Link to={'/'} className="btn">Shop Now</Link>
             </div>
-            <img src="/public/img/banner_Hero3.jpg" alt="Hero Slider 1" />
+            <img src={slide3} alt="Hero Slider 1" />
           </SwiperSlide>
 
 
