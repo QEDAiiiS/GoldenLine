@@ -47,7 +47,7 @@ export default function BtmHeader() {
 
             <div
               style={{ transition: "0.4s ease-in-out" }}
-              className={`category_nav_list absolute top-[100%] left-0 w-[100%] bg-[var(--white_color)] border border-[#999] border-t-0 flex flex-col max-h-[400px] overflow-y-auto  
+              className={`category_nav_list absolute z-10 top-[100%] left-0 w-[100%] bg-[var(--white_color)] border border-[#999] border-t-0 flex flex-col max-h-[400px] overflow-y-auto  
               ${catListDisplay ? "activeList" : "nonActiveList"}`}
             >
               {categories.map((cat) => (

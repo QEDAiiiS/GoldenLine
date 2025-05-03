@@ -21,6 +21,7 @@ export default function HeroSlider() {
       <div className="container ">
         <Swiper 
         loop= {true}
+        
          autoplay={{
          delay: 4500,
          disableOnInteraction: false, }}
