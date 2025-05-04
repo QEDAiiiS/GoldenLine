@@ -3,14 +3,20 @@ import React from 'react'
 import { FaCartArrowDown, FaRegHeart, FaShare, FaStar } from 'react-icons/fa'
 import { FaRegStarHalfStroke } from 'react-icons/fa6'
 
-export default function Product() {
+export default function Product({item}) {
+
+
+    // console.log(item);
+    
+
+
   return (
     <div className="product">
         <div className="img-product">
-            <img src="https://lifemobile.lk/wp-content/uploads/2024/09/apple-iPhone-16-1.jpg" alt="" />
+            <img src={item.images[0]} alt="" />
         </div>
 
-        <p className="name-product">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, voluptatem?</p>
+        <p className="name-product">{item.title}</p>
 
 
         <div className="stars">
@@ -21,7 +27,7 @@ export default function Product() {
             <FaRegStarHalfStroke/>
         </div>
 
-        <p className="price">$ 10000</p>
+        <p className="price">$ {item.price}</p>
 
         <div className="icons">
            <span><FaCartArrowDown/></span> 

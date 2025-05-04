@@ -52,6 +52,7 @@ export default function BtmHeader() {
             >
               {categories.map((cat) => (
                 <Link
+                key={cat.slug}
                   className="  py-[14px] px-[10px] border-b border-[var(--border_color)] text-[14px]"
                   to={cat.slug}
                 >

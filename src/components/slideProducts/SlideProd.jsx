@@ -9,13 +9,17 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-export default function SlideProduct({title}) {
+
+
+
+
+export default function SlideProduct({data, title}) {
   return (
     <>
-      <div className="slide_products slid py-[50px]">
+      <div className="slide_products slid py-[30px]">
         <div className="container">
           <div className="top_slide">
-            <h2>{title}</h2>
+            <h2 className=" capitalize">{title}</h2>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia,
               praesentium!
@@ -29,13 +33,15 @@ export default function SlideProduct({title}) {
             slidesPerView={5}
              navigation={true}
               modules={[Autoplay, Navigation]} className="mySwiper mt-[20px]">
-            <SwiperSlide><Product /></SwiperSlide>
-            <SwiperSlide><Product /></SwiperSlide>
-            <SwiperSlide><Product /></SwiperSlide>
-            <SwiperSlide><Product /></SwiperSlide>
-            <SwiperSlide><Product /></SwiperSlide>
-            <SwiperSlide><Product /></SwiperSlide>
-            <SwiperSlide><Product /></SwiperSlide>
+
+
+
+            {data.map((i)=>{return  <SwiperSlide><Product item={i} /></SwiperSlide> })}
+            
+
+
+
+
           </Swiper>
             </div>
         </div>
