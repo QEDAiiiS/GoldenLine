@@ -7,6 +7,7 @@ import TopHeader from "./components/header/TopHeader";
 import Home from "./pages/home/Home";
 import ProductDetails from "./pages/productDetails/ProductDetails";
 import Cart  from "./pages/cart/Cart";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -16,7 +17,11 @@ function App() {
         <BtmHeader />
       </header>
 
-
+      <Toaster position="bottom-right" toastOptions={{style:{
+        background:'#e9e9e9',
+        borderRadius: '5px',
+        padding:'14px'
+      }}}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />

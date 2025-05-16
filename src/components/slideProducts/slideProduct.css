@@ -181,3 +181,38 @@
     margin-bottom: 10px;
     border-radius: 5px;
 }
+ 
+
+/* ? Toaster */
+.toast-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 300px;
+}
+
+.toast-wrapper img{
+    width: auto;
+    height: 70px;
+    object-fit: cover;
+}
+.toast-content{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+}
+.toast-content h4{
+    font-size: 16px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.toast-content button{
+    margin-top: 5px;
+    font-size: 13px;
+}
