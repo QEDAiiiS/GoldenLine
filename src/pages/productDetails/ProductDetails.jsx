@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import "./productDetails.css";
 import { TiShoppingCart } from "react-icons/ti";
 import SlideProduct from "../../components/slideProducts/SlideProd";
+import ProductDetailsLoading from "./ProductDetailsLoading";
+import SlideProductLoading from "../../components/slideProducts/SlideProductLoading";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -50,11 +52,13 @@ useEffect(()=>{
 
 //   console.log(product);
 
-  if (loading) return <h1>Loading...</h1>;
+  if (loading) return <div className="mt-40"><ProductDetailsLoading/></div> ;
   if (!product) return <h1>The Product Not Found</h1>;
   return (
+
+
     <>
-      <div className="item-details">
+      <div className="item-details mt-22">
         <div className="container">
           <div className="imgs-item">
 
@@ -109,7 +113,7 @@ useEffect(()=>{
       </div>
 
       <div className="relatedProducts">
-        {loadingCatProd? <h1>Loadin Realated Products</h1>:
+        {loadingCatProd? <SlideProductLoading/>:
             <SlideProduct data={categoryProducts.products} title={product.category}/>
         }
       </div>

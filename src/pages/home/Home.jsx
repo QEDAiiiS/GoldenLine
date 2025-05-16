@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import HeroSlider from "../../components/header/HeroSlider";
 import "./slider.css";
 import SlideProduct from "../../components/slideProducts/SlideProd";
+import SlideProductLoading from "../../components/slideProducts/SlideProductLoading";
 
 const categories = [
   "smartphones",
@@ -45,8 +46,9 @@ export default function Home() {
       <HeroSlider />
 
       {loading ? (
-        <h1>Loading...</h1>
+        <SlideProductLoading/>
       ) : (
+
         categories.map((cat) => {
           return <SlideProduct key={cat} data={products[cat]} title={cat.replace("-" , " ")} />;
         })

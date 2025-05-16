@@ -17,7 +17,7 @@ export default function HeroSlider() {
   return (
     <>
     
-    <div className="hero relative my-10">
+    <div className="hero relative mb-10 mt-40">
       <div className="container ">
         <Swiper 
         loop= {true}

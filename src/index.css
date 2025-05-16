@@ -13,18 +13,12 @@
   box-sizing: border-box;
 }
 
-:root {
-  --main_color: #0090f0;
-  --p_color: #7b7b7b;
-  --bg_color: #f3f3f3;
-  --white_color: #fff;
-  --color_heading: #353237;
-  --border_color: #d6d6d6d5;
-}
+
 
 body {
   background-color: #fff;
   font-family: "Inter", sans-serif;
+  padding-top: 150px;
 }
 
 img {
@@ -88,3 +82,28 @@ a{
 .btn:hover{
   scale: 1.1;
 }
+
+
+/* ? Loafing  */
+
+.skeltion{
+    background-color: #e2e5e7;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0)
+    );
+    background-size: 40px 100% ;
+    background-repeat: no-repeat;
+    background-position: left -40px top 0;
+    animation: shine 1s ease infinite;
+}
+
+@keyframes shine{
+    to{
+        background-position: right -40px top 0; 
+    }
+}
+
+
