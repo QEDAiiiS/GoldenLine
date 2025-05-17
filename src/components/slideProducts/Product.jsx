@@ -57,7 +57,7 @@ export default function Product({ item }) {
       </Link>
 
       <div className="icons">
-        <span className="btn-addtocart" onClick={() => handleAddToCart(item)}>
+        <span className= 'btn-addtocart' onClick={() => handleAddToCart(item)}>
           <FaCartArrowDown />
         </span>
         <span>

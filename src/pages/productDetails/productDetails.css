@@ -7,9 +7,9 @@
   --border_color: #d6d6d6d5;
 }
 
-.item-details {
+/* .item-details {
   padding: 50px 0;
-}
+} */
 
 .item-details .container {
   display: flex;
@@ -25,9 +25,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 15px;
 }
 .main-img img {
-  max-height: 450px;
+  max-height: 420px;
   width: auto;
 }
 
@@ -115,7 +116,12 @@
   fill: var(--white_color);
 }
 
-
+/* ? Add To Cart BTN */
+.details-item .btn.in-cart{
+  background: transparent;
+  color: var(--main_color);
+  pointer-events: none;
+}
 /*? Lodin */
 .loading-item .imgs-item {
   height: 500px;

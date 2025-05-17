@@ -77,6 +77,8 @@ a{
   align-items: center;
   transition: 0.3s;
   width: max-content;
+  border: 1px solid var(--main_color);
+  transition: 0.8s ease-in-out ;
 }
 
 .btn:hover{

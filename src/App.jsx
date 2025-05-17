@@ -8,6 +8,7 @@ import Home from "./pages/home/Home";
 import ProductDetails from "./pages/productDetails/ProductDetails";
 import Cart  from "./pages/cart/Cart";
 import { Toaster } from "react-hot-toast";
+import ScrollTop from "./components/ScrollTop";
 
 function App() {
   return (
@@ -22,6 +23,11 @@ function App() {
         borderRadius: '5px',
         padding:'14px'
       }}}/>
+
+
+      <ScrollTop/>
+
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />

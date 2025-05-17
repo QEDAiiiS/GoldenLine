@@ -10,6 +10,8 @@ export default function CartProvider({ children }) {
     return savedCartItems ? JSON.parse(savedCartItems) : [];
   });
 
+
+    //TODO Add TO Cart
   const addToCart = (item) => {
     setCartItems((prevItems) => [...prevItems, { ...item, itemQuantity: 1 }]);
   };
