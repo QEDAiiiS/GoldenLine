@@ -3,6 +3,7 @@ import HeroSlider from "../../components/header/HeroSlider";
 import "./slider.css";
 import SlideProduct from "../../components/slideProducts/SlideProd";
 import SlideProductLoading from "../../components/slideProducts/SlideProductLoading";
+import PageTransition from "../../components/PageTransition";
 
 const categories = [
   "smartphones",
@@ -43,6 +44,9 @@ export default function Home() {
 
   return (
     <>
+    <PageTransition>
+
+
       <HeroSlider />
 
       {loading ? (
@@ -53,6 +57,9 @@ export default function Home() {
           return <SlideProduct key={cat} data={products[cat]} title={cat.replace("-" , " ")} />;
         })
       )}
+
+
+    </PageTransition>
     </>
   );
 }

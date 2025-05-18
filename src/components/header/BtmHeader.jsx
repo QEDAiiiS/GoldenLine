@@ -5,10 +5,17 @@ import { Link, useLocation } from "react-router-dom";
 import { PiSignInBold } from "react-icons/pi";
 import { FaUserPlus } from "react-icons/fa";
 
+
+
+// !   COMPONENT FUNCTION
 export default function BtmHeader() {
+
+
   const [categories, setCategories] = useState([]);
   const [catListDisplay, setCatListDisplay] = useState(false);
 
+
+  // !  FETCH CATEGORISE FROM API
   useEffect(() => {
     const getData = async () => {
       let res = await fetch("https://dummyjson.com/products/categories");
@@ -20,6 +27,8 @@ export default function BtmHeader() {
     getData();
   }, []);
 
+
+  // ! NAVE LINKS 
   const navLinks = [
     { title: "Home", link: "/" },
     { title: "About", link: "/about" },
@@ -29,10 +38,21 @@ export default function BtmHeader() {
   ];
 
   const location = useLocation();
+
+
+  // ! CLSE CATEGORY LIST
+  useEffect(()=>{
+    setCatListDisplay(false)
+  }, [location])
+
+  // ! JSX ELEMENTS
   return (
     <div className="btm_header bg-[var(--main_color)]">
       <div className="container flex items-center justify-between">
+
         <nav className="nav flex items-center gap-[50px] h-[50px]">
+
+          {/*//! CATEGORY PART  */}
           <div className="category_nav w-[220px] h-[100%] relative">
             <div
               onClick={() => setCatListDisplay(!catListDisplay)}
@@ -54,7 +74,7 @@ export default function BtmHeader() {
                 <Link
                 key={cat.slug}
                   className="  py-[14px] px-[10px] border-b border-[var(--border_color)] text-[14px]"
-                  to={cat.slug}
+                  to={`/categoryProducts/${cat.slug}`}
                 >
                   {cat.name}
                 </Link>
@@ -62,6 +82,7 @@ export default function BtmHeader() {
             </div>
           </div>
 
+              {/*//! NAV LINKS */}
           <div className="nav_links flex  h-[100%]">
             {navLinks.map((link) => (
               <Link
@@ -80,8 +101,10 @@ export default function BtmHeader() {
               </Link>
             ))}
           </div>
+
         </nav>
 
+            {/*//! SIGN IN UP */}
         <div className="sign_icons flex gap-[20px]">
           <Link to={"/"}>
             <PiSignInBold fill="var(--white_color)" size="22px" />
@@ -90,6 +113,8 @@ export default function BtmHeader() {
             <FaUserPlus fill="var(--white_color)" size="22px" />
           </Link>
         </div>
+
+
       </div>
     </div>
   );

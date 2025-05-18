@@ -6,6 +6,7 @@ import ProductDetailsLoading from "./ProductDetailsLoading";
 import SlideProductLoading from "../../components/slideProducts/SlideProductLoading";
 import ImgsProductDetails from "./ImgsProductDetails";
 import ProductInfo from "./ProductInfo";
+import PageTransition from "../../components/PageTransition";
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -63,6 +64,9 @@ export default function ProductDetails() {
 
   return (
     <>
+
+    <PageTransition key={id}>
+
       {loading ? (
         <ProductDetailsLoading />
       ) : (
@@ -85,6 +89,7 @@ export default function ProductDetails() {
           />
         )}
       </div>
+    </PageTransition>
     </>
   );
 }
