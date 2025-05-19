@@ -121,7 +121,12 @@
     background-color: var(--main_color);
     pointer-events: none;
 }
-.product.in-cart .icons .btn-addtocart svg{
+
+.icons .btn-addtofav.in-fav{
+    background-color: var(--main_color);
+}
+.product.in-cart .icons .btn-addtocart svg,
+.btn-addtofav.in-fav svg{
     fill: var(--white_color);
 }
 

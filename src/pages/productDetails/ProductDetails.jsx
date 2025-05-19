@@ -8,7 +8,14 @@ import ImgsProductDetails from "./ImgsProductDetails";
 import ProductInfo from "./ProductInfo";
 import PageTransition from "../../components/PageTransition";
 
+
+
+
+// ! FUNCTION COMPONETN
 export default function ProductDetails() {
+
+
+
   const { id } = useParams();
   // console.log(id);
   const [product, setProduct] = useState(null);
@@ -16,6 +23,9 @@ export default function ProductDetails() {
   const [categoryProducts, setCategoryProducts] = useState([]);
   const [loadingCatProd, setLoadingCatProd] = useState(true);
 
+
+
+  // ! FETCH PRODUCT DATA
   useEffect(() => {
     const getProdData = async () => {
       try {
@@ -31,6 +41,9 @@ export default function ProductDetails() {
     getProdData();
   }, [id]);
 
+
+
+  // ! FETCH RELATED PRODUCTS  BY CATEGORY
   useEffect(() => {
     if (!product) return;
     const getCategoryProducts = async () => {

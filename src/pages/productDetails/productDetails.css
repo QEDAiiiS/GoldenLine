@@ -104,6 +104,10 @@
   transition: 0.5s;
 }
 
+.icons .fav-icon.in-fav{
+  background: var(--main_color);
+}
+
 .details-item .icons span:hover {
   background-color: var(--main_color);
   transform: scale(1.1);

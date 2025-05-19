@@ -5,19 +5,22 @@ import { TiShoppingCart } from "react-icons/ti";
 import { cartContext } from "../../contexts/CartContext";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { favContext } from "../../contexts/FavContext";
 
-
-
-
-
+// ! FUNCTION COMPONENT
 export default function ProductInfo({ prd }) {
-  const { cartItems, addToCart } = useContext(cartContext);
-  const navigate = useNavigate()
-  const isInCart= cartItems.some((i) => i.id === prd.id)
 
+
+  const { cartItems, addToCart } = useContext(cartContext);
+  const navigate = useNavigate();
+  const isInCart = cartItems.some((i) => i.id === prd.id);
+  const { favProducts, addToFav, deleteFavPrd } = useContext(favContext);
+
+
+
+  // ! HANDLE ADD TO CART
   const handleAddToCart = (item) => {
     addToCart(item);
-
     toast.success(
       <div className="toast-wrapper">
         <img src={item.images[0]} />
@@ -33,6 +36,21 @@ export default function ProductInfo({ prd }) {
       { duration: 3500 }
     );
   };
+
+      // ! HANDLE ADD TO FAVORITES
+    const isInFav = favProducts.some((i) => i.id === prd.id);
+    const handleAddToFav = (prd) => {
+      if (isInFav) {
+        deleteFavPrd(prd.id);
+        toast.error(<h1>{prd.title} delete from favorites</h1>);
+      } else {
+        addToFav(prd);
+        toast.success(<h1>{prd.title} add to favorites</h1>);
+      }
+    };
+
+
+
   return (
     <div className="details-item">
       <div className="name">{prd.title}</div>
@@ -56,13 +74,16 @@ export default function ProductInfo({ prd }) {
         Hurry Up Only {prd.stock} products ledt in stock
       </h5>
 
-      <button className= {`btn ${isInCart? 'in-cart': ''}`} onClick={() => handleAddToCart(prd)}>
-       {isInCart ? 'Item In Cart' : 'Add To Cart'}  <TiShoppingCart />
+      <button
+        className={`btn ${isInCart ? "in-cart" : ""}`}
+        onClick={() => handleAddToCart(prd)}
+      >
+        {isInCart ? "Item In Cart" : "Add To Cart"} <TiShoppingCart />
       </button>
 
       <div className="icons">
-        <span>
-          <FaRegHeart fill="var(--main_color)" />
+        <span className={`fav-icon ${isInFav? 'in-fav' : ''}`} onClick={() => handleAddToFav(prd)}>
+          <FaRegHeart fill={`${isInFav ? 'var(--white_color)' :'var(--main_color)'  }`} />
         </span>
         <span>
           <FaShare fill="var(--main_color)" />

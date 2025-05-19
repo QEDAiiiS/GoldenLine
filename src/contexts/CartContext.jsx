@@ -11,12 +11,12 @@ export default function CartProvider({ children }) {
   });
 
 
-    //TODO Add TO Cart
+    //! Add TO Cart
   const addToCart = (item) => {
     setCartItems((prevItems) => [...prevItems, { ...item, itemQuantity: 1 }]);
   };
 
-  //TODO Increes Item Quantity
+  //! Increes Item Quantity
   const increesItemQuantity = (id) => {
     setCartItems(prevItems => prevItems.map((i) =>
         i.id == id ? { ...i, itemQuantity: i.itemQuantity + 1 } :  i 
@@ -24,13 +24,13 @@ export default function CartProvider({ children }) {
     );
   };
 
-  //TODO Decrees Item Quantity 
+  //! Decrees Item Quantity 
   const decreesItemQuantity = (id)=>{
     setCartItems((prevItems)=> prevItems.map((i)=> i.id == id &&  i.itemQuantity > 1?
      {...i, itemQuantity: i.itemQuantity - 1} : i))
   }
 
-  //TODO Delete Product
+  //! Delete Product
   const deletePrd = (id)=>{
     setCartItems(cartItems.filter((i)=> i.id != id))
   }

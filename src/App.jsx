@@ -11,6 +11,13 @@ import { Toaster } from "react-hot-toast";
 // import ScrollTop from "./components/ScrollTop";
 import { AnimatePresence } from "framer-motion";
 import CategoryProducts from "./pages/CategoryProducts/CategoryProducts";
+import SearchResult from "./pages/searchResult/SearchResult";
+import FavPage from "./pages/favPage/FavPage";
+
+
+
+
+
 
 function App() {
   return (
@@ -37,8 +44,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/favPage" element={<FavPage />} />
           <Route path="/productDetails/:id" element={<ProductDetails />} />
           <Route path="/categoryProducts/:cat" element={<CategoryProducts />} />
+          <Route path="/search" element={<SearchResult />} />
         </Routes>
       </AnimatePresence>
     </>
