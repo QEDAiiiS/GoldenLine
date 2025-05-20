@@ -19,3 +19,6 @@ export default function ProductDetailsLoading() {
     </div>
   );
 }
+
+
+// * ==================  THAT IS A COMPONENT DISPLAY BEFOR DATA COMING  =================== 

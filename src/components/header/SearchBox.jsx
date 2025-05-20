@@ -2,14 +2,24 @@ import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-// ! FUNCTION COMPONENT
+
+
+
+
+
+        // * ==================  FUNCTION COMPONENT   ===================
 export default function SearchBox() {
+
+
+  // * ==================  MY HOOKS  ===================
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
   const [suggistions, setSuggistions] = useState([]);
   const location = useLocation();
 
-  // ! HANDLE SUBMIT SEARCH FORM
+
+
+  // * ==================  HANDLE SUBMIT SEARCH FORM   ===================
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchTerm) {
@@ -19,7 +29,7 @@ export default function SearchBox() {
     setSuggistions([]);
   };
 
-  // ! FETCH SUGGISTION
+  // * ==================  FETCH SUGGISTION  ===================
   useEffect(() => {
     const fetchSuggistion = async () => {
       if (!searchTerm.trim()) {
@@ -45,16 +55,18 @@ export default function SearchBox() {
   }, [searchTerm]);
   //   console.log(suggistions);
 
-  // ! CLOSE SEARCH SUGGISTIONS
+  // * ==================  CLOSE SEARCH SUGGISTIONS  ===================
   useEffect(() => {
     setSuggistions([]);
     setSearchTerm("");
   }, [location]);
 
-  // ! COMPONENT ELEMENTS
+  // * ==================  COMPONENT ELEMENTS  ===================
   return (
     <>
       <div className="search-box">
+
+        {/* // * ==================  FORM INPUT   =================== */}
         <form
           onSubmit={handleSubmit}
           className="search_box flex items-center bg-[var(--bg_color)] rounded-[30px] border border-[var(--main_color)]"
@@ -75,6 +87,7 @@ export default function SearchBox() {
           </button>
         </form>
 
+        {/* // * ==================  SUGGISTIONS  =================== */}
         {suggistions.length > 0 && (
           <ul className="suggitions-list  absolute bg-[var(--bg_color)] w-[25%] p-2 rounded-2xl mt-3">
             {suggistions.map((item) => {
@@ -93,6 +106,8 @@ export default function SearchBox() {
             })}
           </ul>
         )}
+
+        
       </div>
     </>
   );

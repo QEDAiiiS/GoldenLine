@@ -3,17 +3,25 @@ import { cartContext } from "../../contexts/CartContext";
 import { FaTrashAlt } from "react-icons/fa";
 import './cart.css'
 
+
+
+// * ==================  FUNCTION COMPONENT  =================== 
 export default function Cart() {
+
+// * ==================  MY HOOKS  =================== 
   const { cartItems, increesItemQuantity, decreesItemQuantity, deletePrd } = useContext(cartContext);
   //   console.log(cartItems);
-
   const total = cartItems.reduce((acc, item)=> acc + item.price * item.itemQuantity , 0)
+  
+// * ==================  JSX COMPONENT ELEMENTS  =================== 
   return (
     <>
       <div className="checkout">
         <div className="ordersummry">
           <h1>Order Summry</h1>
 
+
+    {/* // * ==================  ITEMS  ===================  */}
           <div className="items">
             {cartItems.length == 0 ? (
               <h1>Your Cart is empty.</h1>
@@ -45,7 +53,7 @@ export default function Cart() {
             )}
           </div>
  
-
+    {/* // * ==================  BOTTOM SUMMRY  ===================  */}
             <div className="bottomsummry">
               <div className="shop-table">
                 <p>Total : </p>

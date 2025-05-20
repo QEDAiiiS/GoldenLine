@@ -2,6 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&family=Poetsen+One&display=swap');
+
+
 /* 
   font-family: "Inter", sans-serif;
   font-family: "DM Sans", sans-serif;
@@ -12,6 +16,15 @@
   /* margin: 0; */
   box-sizing: border-box;
 }
+/* font-family: "Playwrite DK Loopet", cursive; */
+
+@font-face {
+  font-family: 'play';
+  src: url(./assets/fonts/Playwrite_DK_Loopet/PlaywriteDKLoopet-VariableFont_wght.ttf);
+}
+
+
+
 
 
 

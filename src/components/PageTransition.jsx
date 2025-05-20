@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+
 export default function PageTransition({ children }) {
   return (
     <motion.div
@@ -15,7 +16,4 @@ export default function PageTransition({ children }) {
 }
 
 
-
-
-
-
+// * THAT IS A COMPONENT TO MAKE ANIMATION FOR ANY PAGE 

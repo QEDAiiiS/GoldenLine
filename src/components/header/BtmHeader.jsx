@@ -7,15 +7,18 @@ import { FaUserPlus } from "react-icons/fa";
 
 
 
-// !   COMPONENT FUNCTION
+
+// * ==================  FUNCTION COMPONENT   =================== 
 export default function BtmHeader() {
 
 
+// * ==================  MY HOOKS   =================== 
   const [categories, setCategories] = useState([]);
   const [catListDisplay, setCatListDisplay] = useState(false);
+  const location = useLocation();
 
 
-  // !  FETCH CATEGORISE FROM API
+// * ==================  FETCH CATEGORISE FROM API   =================== 
   useEffect(() => {
     const getData = async () => {
       let res = await fetch("https://dummyjson.com/products/categories");
@@ -28,7 +31,7 @@ export default function BtmHeader() {
   }, []);
 
 
-  // ! NAVE LINKS 
+// * ==================  NAVE LINKS   =================== 
   const navLinks = [
     { title: "Home", link: "/" },
     { title: "About", link: "/about" },
@@ -37,22 +40,21 @@ export default function BtmHeader() {
     { title: "Contact", link: "/contact" },
   ];
 
-  const location = useLocation();
 
 
-  // ! CLSE CATEGORY LIST
+// * ==================  CLOSE CATEGORY LIST   =================== 
   useEffect(()=>{
     setCatListDisplay(false)
   }, [location])
 
-  // ! JSX ELEMENTS
+// * ==================  JSX COMPONENT ELEMENTS   =================== 
   return (
     <div className="btm_header bg-[var(--main_color)]">
       <div className="container flex items-center justify-between">
 
         <nav className="nav flex items-center gap-[50px] h-[50px]">
 
-          {/*//! CATEGORY PART  */}
+    {/*  // * ==================  CATEGORY PART   ===================  */}
           <div className="category_nav w-[220px] h-[100%] relative">
             <div
               onClick={() => setCatListDisplay(!catListDisplay)}
@@ -82,7 +84,7 @@ export default function BtmHeader() {
             </div>
           </div>
 
-              {/*//! NAV LINKS */}
+    {/*  // * ==================  NAV LINKS   ===================  */}
           <div className="nav_links flex  h-[100%]">
             {navLinks.map((link) => (
               <Link
@@ -105,6 +107,7 @@ export default function BtmHeader() {
         </nav>
 
             {/*//! SIGN IN UP */}
+    {/*  // * ==================  SIGN IN & UP ICONS  ===================  */}
         <div className="sign_icons flex gap-[20px]">
           <Link to={"/"}>
             <PiSignInBold fill="var(--white_color)" size="22px" />

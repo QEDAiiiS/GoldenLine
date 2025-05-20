@@ -12,17 +12,28 @@ import { cartContext } from "../../contexts/CartContext";
 import toast from "react-hot-toast";
 import { favContext } from "../../contexts/FavContext";
 
-// ! FUNCTION COMPONENT
+
+
+
+
+
+
+// * ==================  FUNCTION COMPONENT  =================== 
 export default function Product({ item }) {
   // console.log(item);
 
+
+// * ==================  MY HOOKS  =================== 
   const { cartItems, addToCart } = useContext(cartContext);
   // console.log(cartItems);
   const { favProducts, addToFav, deleteFavPrd } = useContext(favContext);
-
   const isInCart = cartItems.some((i) => i.id === item.id);
+  const navigate = useNavigate();
 
-  //! Handel  Add To Cart
+
+
+
+// * ==================  Handel  Add To Cart  =================== 
   const handleAddToCart = (item) => {
     addToCart(item);
 
@@ -42,9 +53,8 @@ export default function Product({ item }) {
     );
   };
 
-  const navigate = useNavigate();
 
-  //! Handel  Add & DELETE To Favorites
+// * ==================  Handel  Add & DELETE To Favorites  =================== 
   const isInFav = favProducts.some((i)=> i.id === item.id)
   const handleAddToFavorits = (item) => {
     if (isInFav) {
@@ -56,8 +66,14 @@ export default function Product({ item }) {
     }
   };
 
+
+// * ==================  COMPONENT ELEMENTS  =================== 
   return (
+
     <div className={`product ${isInCart ? "in-cart" : ""}`}>
+
+
+{/* // * ==================  PRODUCT BOX  ===================  */}
       <Link to={`/productDetails/${item.id}`}>
         <span className="status-cart">
           <FaCheck /> in Cart
@@ -79,6 +95,8 @@ export default function Product({ item }) {
         <p className="price">$ {item.price}</p>
       </Link>
 
+
+{/* // * ==================  HOVER ICONS  ===================  */}
       <div className="icons">
 
 

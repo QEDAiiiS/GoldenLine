@@ -1,19 +1,18 @@
 import React from "react";
 import Product from "./Product";
 import "./slideProduct.css";
-
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 
 
 
 
-
+// * ==================  FUNCTION COMPONENT  =================== 
 export default function SlideProduct({data, title}) {
+
+// * ==================   JSX COMPONENT  ELEMENTS =================== 
   return (
     <>
       <div className="slide_products slid py-[30px]">
@@ -27,6 +26,7 @@ export default function SlideProduct({data, title}) {
           </div>
             <div className="product-slider">
 
+    {/* // * ==================  SWIPER  ===================  */}
           <Swiper
            autoplay={{delay: 2500,disableOnInteraction: false, }}
            loop={true}

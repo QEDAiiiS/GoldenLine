@@ -7,10 +7,14 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { favContext } from "../../contexts/FavContext";
 
-// ! FUNCTION COMPONENT
+
+
+
+
+// * ==================  FUNCTION COMPONENT  =================== 
 export default function ProductInfo({ prd }) {
 
-
+// * ==================  MY HOOKS  =================== 
   const { cartItems, addToCart } = useContext(cartContext);
   const navigate = useNavigate();
   const isInCart = cartItems.some((i) => i.id === prd.id);
@@ -18,7 +22,7 @@ export default function ProductInfo({ prd }) {
 
 
 
-  // ! HANDLE ADD TO CART
+// * ==================  HANDLE ADD TO CART  =================== 
   const handleAddToCart = (item) => {
     addToCart(item);
     toast.success(
@@ -37,7 +41,7 @@ export default function ProductInfo({ prd }) {
     );
   };
 
-      // ! HANDLE ADD TO FAVORITES
+// * ==================   HANDLE ADD TO FAVORITES  =================== 
     const isInFav = favProducts.some((i) => i.id === prd.id);
     const handleAddToFav = (prd) => {
       if (isInFav) {
@@ -50,7 +54,7 @@ export default function ProductInfo({ prd }) {
     };
 
 
-
+// * ==================   JSX COMPONENT ELEMENTS  =================== 
   return (
     <div className="details-item">
       <div className="name">{prd.title}</div>

@@ -4,14 +4,24 @@ import PageTransition from "../../components/PageTransition";
 import SlideProductLoading from "../../components/slideProducts/SlideProductLoading";
 import Product from "../../components/slideProducts/Product";
 
-//! FUNCTION COMPONENT
+
+
+
+// * ==================   FUNCTION COMPONENT  =================== 
 export default function SearchResult() {
+  
+
+// * ==================   MY HOOKS  =================== 
   const query = new URLSearchParams(useLocation().search).get("query");
   // console.log(query);
   const [searchProducts, setSearchProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  //!  GET DATA
+
+
+
+
+// * ==================   GET SEARCH DATA  =================== 
   useEffect(() => {
     const getData = async () => {
       try {
@@ -30,7 +40,11 @@ export default function SearchResult() {
   }, [query]);
   console.log(searchProducts);
 
-  //! COMPONENT ELEMENTS
+
+
+
+  
+// * ==================   JSX COMPONENT ELEMENTS  =================== 
   return (
     <PageTransition key={query}>
       <div className="search-products">

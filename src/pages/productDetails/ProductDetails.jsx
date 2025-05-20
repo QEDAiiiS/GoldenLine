@@ -12,10 +12,11 @@ import PageTransition from "../../components/PageTransition";
 
 
 // ! FUNCTION COMPONETN
+// * ==================  FUNCTION COMPONETN  ===================  
 export default function ProductDetails() {
 
 
-
+// * ==================  MY HOOKS  ===================  
   const { id } = useParams();
   // console.log(id);
   const [product, setProduct] = useState(null);
@@ -25,7 +26,7 @@ export default function ProductDetails() {
 
 
 
-  // ! FETCH PRODUCT DATA
+// * ==================  FETCH PRODUCT DATA  ===================  
   useEffect(() => {
     const getProdData = async () => {
       try {
@@ -43,7 +44,8 @@ export default function ProductDetails() {
 
 
 
-  // ! FETCH RELATED PRODUCTS  BY CATEGORY
+  
+// * ==================  FETCH RELATED PRODUCTS  BY CATEGORY  ===================  
   useEffect(() => {
     if (!product) return;
     const getCategoryProducts = async () => {
@@ -61,11 +63,11 @@ export default function ProductDetails() {
 
     getCategoryProducts();
   }, [product]);
-
   // console.log(categoryProducts);
-
   //   console.log(product);
 
+
+// * ==================  JSX COMPONENT ELEMENTS  ===================  
   if (loading)
     return (
       <div>
@@ -80,18 +82,26 @@ export default function ProductDetails() {
 
     <PageTransition key={id}>
 
+
+{/* // * ==================  PRODUCT DETAILS  ===================   */}
       {loading ? (
         <ProductDetailsLoading />
       ) : (
         <div className="item-details">
           <div className="container">
+{/* // * ==================  IMGS COMPONENT  ===================   */}
             <ImgsProductDetails prd={product} />
 
+
+{/* // * ==================   IMGS COMPONENT  ===================   */}
             <ProductInfo prd={product} />
           </div>
         </div>
       )}
 
+
+
+{/* // * ==================  RELATED PRODUCTS SLIDE  ===================   */}
       <div className="relatedProducts">
         {loadingCatProd ? (
           <SlideProductLoading />

@@ -17,3 +17,6 @@ export default function ScrollTop() {
 
   return null
 }
+
+
+// * THAT IS A COMPONENT TO MAKE SCROLL TOP FOR ANY PAGE 

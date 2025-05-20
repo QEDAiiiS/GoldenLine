@@ -5,6 +5,9 @@ import SlideProduct from "../../components/slideProducts/SlideProd";
 import SlideProductLoading from "../../components/slideProducts/SlideProductLoading";
 import PageTransition from "../../components/PageTransition";
 
+
+
+// * ==================  CATEGORIES ARRAY  =================== 
 const categories = [
   "smartphones",
   "mobile-accessories",
@@ -14,10 +17,19 @@ const categories = [
   "sports-accessories",
 ];
 
+
+
+// * ==================  FUNCTION COMPONENT  =================== 
 export default function Home() {
+
+// * ==================  MY HOOKS  =================== 
   const [products, setProducts] = useState({});
   const [loading, setLoading] = useState(true);
 
+
+
+
+// * ==================  FETCH PRODUCTS WITH THER CATEGORIES  =================== 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -39,16 +51,21 @@ export default function Home() {
     };
     fetchProducts();
   }, []);
-
   // console.log(products);
 
+
+
+
+// * ==================  JSX COMPONENT ELEMENTS  =================== 
   return (
     <>
     <PageTransition>
 
-
+    {/* // * ==================  HEROO  ===================  */}
       <HeroSlider />
 
+
+    {/* // * ==================  MAP CATEGORIES  ===================  */}
       {loading ? (
         <SlideProductLoading/>
       ) : (

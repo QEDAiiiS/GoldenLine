@@ -4,13 +4,20 @@ import Product from "../../components/slideProducts/Product";
 import PageTransition from "../../components/PageTransition";
 import SlideProductLoading from "../../components/slideProducts/SlideProductLoading";
 
+
+
+// * ==================  FUNCTION COMPONENT  =================== 
 export default function CategoryProducts() {
+
+// * ==================  MY HOOKS  =================== 
   const { cat } = useParams();
   // console.log(cat);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState();
 
-  // ! FETCH PRODUCTS BY CATEGORY
+
+
+// * ==================  FETCH PRODUCTS BY CATEGORY  =================== 
   useEffect(() => {
     const getData = async () => {
       try {
@@ -29,14 +36,20 @@ export default function CategoryProducts() {
   }, [cat]);
   console.log(products);
 
+
+
+// * ==================  JSX COMPONENT ELEMENTS  =================== 
   return (
     <>
       <PageTransition key={cat}>
+
+
         <div className="category-products">
           {loading ? (
             <SlideProductLoading key={cat} />
           ) : (
             <div className="container">
+      {/* // * ==================  TOP SECTION  ===================  */}
               <div className="top_slide">
                 <h2 className=" capitalize">
                   {cat} : {products.length}
@@ -47,6 +60,9 @@ export default function CategoryProducts() {
                 </p>
               </div>
 
+
+
+      {/* // * ==================  MAP PRODUCTS  ===================  */}
               <div className=" flex flex-wrap items-center justify-between ">
                 {products.map((prd, index) => (
                   <div className="mx-auto" key={index}>

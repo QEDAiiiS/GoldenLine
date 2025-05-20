@@ -1,5 +1,7 @@
-//TODO https://golden-line-seven.vercel.app/
+
+
 //TODO VERCEL LINK
+//TODO https://golden-line-seven.vercel.app/
 
 import { Route, Routes } from "react-router-dom";
 import BtmHeader from "./components/header/BtmHeader";
@@ -22,11 +24,16 @@ import FavPage from "./pages/favPage/FavPage";
 function App() {
   return (
     <>
+{/* // * ==================   NAVBAR  ===================  */}
       <header className=" fixed top-0 left-0 right-0 z-10 bg-[var(--white_color)]">
         <TopHeader />
         <BtmHeader />
       </header>
 
+
+
+
+{/* // * ==================   TOASTERE  ===================  */}
       <Toaster
         position="bottom-right"
         toastOptions={{
