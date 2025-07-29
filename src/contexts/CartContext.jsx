@@ -44,7 +44,7 @@ export default function CartProvider({ children }) {
   }
 
 
-// * ==================  SET  CART ITEMS IN LOCAL STORGE  =================== 
+// * ==================  SET  CART ITEMS IN LOCAL STORAGE  =================== 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);

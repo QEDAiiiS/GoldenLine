@@ -2,123 +2,93 @@
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&family=Poetsen+One&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&family=Poetsen+One&display=swap");
 /* 
   font-family: "Inter", sans-serif;
   font-family: "DM Sans", sans-serif;
 */
-
 * {
-  /* padding: 0; */
-  /* margin: 0; */
+  /* padding: 0;
+  margin: 0; */
   box-sizing: border-box;
 }
 /* font-family: "Playwrite DK Loopet", cursive; */
-
 @font-face {
-  font-family: 'play';
+  font-family: "play";
   src: url(./assets/fonts/Playwrite_DK_Loopet/PlaywriteDKLoopet-VariableFont_wght.ttf);
 }
-
-
-
-
-
-
 body {
   background-color: #fff;
   font-family: "Inter", sans-serif;
-  padding-top: 150px;
+  /* padding-top: 150px; */
 }
-
 img {
   width: 100%;
 }
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  /* color: var(--color_heading); */
   font-family: "DM Sans", sans-serif;
 }
-
-/* span{
-  color:var(--main_Color)
-} */
-
-/* p{
-  color: var(--p_color);
-} */
-
-input, button,select,textarea{
+input,
+button,
+select,
+textarea {
   outline: none;
   border: none;
 }
-a{
+a {
   text-decoration: none;
   color: var(--color_heading);
 }
-
-.container{
+.container {
   width: 80%;
   margin: 0 auto;
   max-width: 1350px;
 }
-
-.nonActiveList{
+.nonActiveList {
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
-.activeList{
+.activeList {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
-
-.btn{
-  padding: 10px 18px;
-  text-transform:  capitalize;
-  border-radius: 30px;
+.btn {
+  /* padding: 10px 18px; */
+  text-transform: capitalize;
+  /* border-radius: 30px; */
   cursor: pointer;
   background-color: var(--main_color);
-  color:  var(--white_color);
-  display: flex;
-  gap: 10px;
-  align-items: center;
+  color: var(--white_color);
+  /* display: flex; */
+  /* gap: 10px; */
+  /* align-items: center; */
   transition: 0.3s;
-  width: max-content;
+  /* width: max-content; */
   border: 1px solid var(--main_color);
-  transition: 0.8s ease-in-out ;
+  transition: 0.8s ease-in-out;
 }
-
-.btn:hover{
+.btn:hover {
   scale: 1.1;
 }
-
-
 /* ? Loafing  */
-
-.skeltion{
-    background-color: #e2e5e7;
-    background-image: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0)
-    );
-    background-size: 40px 100% ;
-    background-repeat: no-repeat;
-    background-position: left -40px top 0;
-    animation: shine 1s ease infinite;
+.skeltion {
+  background-color: #e2e5e7;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0)
+  );
+  background-size: 40px 100%;
+  background-repeat: no-repeat;
+  background-position: left -40px top 0;
+  animation: shine 1s ease infinite;
 }
-
-@keyframes shine{
-    to{
-        background-position: right -40px top 0; 
-    }
+@keyframes shine {
+  to {
+    background-position: right -40px top 0;
+  }
 }
-
-

@@ -6,13 +6,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 
-
-
-
-// * ==================  FUNCTION COMPONENT  =================== 
-export default function SlideProduct({data, title}) {
-
-// * ==================   JSX COMPONENT  ELEMENTS =================== 
+// * ==================  FUNCTION COMPONENT  ===================
+export default function SlideProduct({ data, title }) {
+  // * ==================   JSX COMPONENT  ELEMENTS ===================
   return (
     <>
       <div className="slide_products slid py-[30px]">
@@ -24,26 +20,37 @@ export default function SlideProduct({data, title}) {
               praesentium!
             </p>
           </div>
-            <div className="product-slider">
-
-    {/* // * ==================  SWIPER  ===================  */}
-          <Swiper
-           autoplay={{delay: 2500,disableOnInteraction: false, }}
-           loop={true}
-            slidesPerView={5}
-             navigation={true}
-              modules={[Autoplay, Navigation]} className="mySwiper mt-[20px]">
-
-
-
-            {data.map((i)=>{return  <SwiperSlide><Product item={i} /></SwiperSlide> })}
-            
-
-
-
-
-          </Swiper>
-            </div>
+          <div className="product-slider">
+            {/* // * ==================  SWIPER  ===================  */}
+            <Swiper
+              autoplay={{ delay: 2500, disableOnInteraction: false }}
+              loop={true}
+              // slidesPerView={5}
+              navigation={true}
+              modules={[Autoplay, Navigation]}
+              spaceBetween={10}
+              className="mySwiper mt-[20px]"
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                768: {
+                  slidesPerView: 3,
+                },
+                1024: {
+                  slidesPerView: 5,
+                },
+              }}
+            >
+              {data.map((i) => {
+                return (
+                  <SwiperSlide>
+                    <Product item={i} />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
+          </div>
         </div>
       </div>
     </>

@@ -17,7 +17,7 @@ export default function ImgsProductDetails({ prd }) {
 
 // * ==================  JSX COMPONENT ELEMENTS  =================== 
   return (
-    <div className="imgs-item">
+    <div className="imgs-item w-full!">
 
 {/* // * ==================  MAIN IMG  ===================  */}
       <div className="main-img">

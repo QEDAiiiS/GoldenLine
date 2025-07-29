@@ -16,8 +16,8 @@ export default function Cart() {
 // * ==================  JSX COMPONENT ELEMENTS  =================== 
   return (
     <>
-      <div className="checkout">
-        <div className="ordersummry">
+      <div className="checkout mt-40 px-6">
+        <div className="ordersummry max-w-2xl ">
           <h1>Order Summry</h1>
 
 
@@ -31,7 +31,7 @@ export default function Cart() {
 
                 <div className="item-cart" key={index}>
                     <div className="img-name">
-                      <div className="img-item">
+                      <div className="img-item w-32">
                         <img src={item.images[0]} alt=""  />
                       </div>
 
@@ -70,3 +70,9 @@ export default function Cart() {
     </>
   );
 }
+
+
+
+
+
+

@@ -8,15 +8,10 @@ import ImgsProductDetails from "./ImgsProductDetails";
 import ProductInfo from "./ProductInfo";
 import PageTransition from "../../components/PageTransition";
 
-
-
-
 // ! FUNCTION COMPONETN
-// * ==================  FUNCTION COMPONETN  ===================  
+// * ==================  FUNCTION COMPONETN  ===================
 export default function ProductDetails() {
-
-
-// * ==================  MY HOOKS  ===================  
+  // * ==================  MY HOOKS  ===================
   const { id } = useParams();
   // console.log(id);
   const [product, setProduct] = useState(null);
@@ -24,9 +19,7 @@ export default function ProductDetails() {
   const [categoryProducts, setCategoryProducts] = useState([]);
   const [loadingCatProd, setLoadingCatProd] = useState(true);
 
-
-
-// * ==================  FETCH PRODUCT DATA  ===================  
+  // * ==================  FETCH PRODUCT DATA  ===================
   useEffect(() => {
     const getProdData = async () => {
       try {
@@ -42,10 +35,7 @@ export default function ProductDetails() {
     getProdData();
   }, [id]);
 
-
-
-  
-// * ==================  FETCH RELATED PRODUCTS  BY CATEGORY  ===================  
+  // * ==================  FETCH RELATED PRODUCTS  BY CATEGORY  ===================
   useEffect(() => {
     if (!product) return;
     const getCategoryProducts = async () => {
@@ -66,8 +56,7 @@ export default function ProductDetails() {
   // console.log(categoryProducts);
   //   console.log(product);
 
-
-// * ==================  JSX COMPONENT ELEMENTS  ===================  
+  // * ==================  JSX COMPONENT ELEMENTS  ===================
   if (loading)
     return (
       <div>
@@ -79,40 +68,41 @@ export default function ProductDetails() {
 
   return (
     <>
-
-    <PageTransition key={id}>
-
-
-{/* // * ==================  PRODUCT DETAILS  ===================   */}
-      {loading ? (
-        <ProductDetailsLoading />
-      ) : (
-        <div className="item-details">
-          <div className="container">
-{/* // * ==================  IMGS COMPONENT  ===================   */}
-            <ImgsProductDetails prd={product} />
-
-
-{/* // * ==================   IMGS COMPONENT  ===================   */}
-            <ProductInfo prd={product} />
-          </div>
-        </div>
-      )}
-
-
-
-{/* // * ==================  RELATED PRODUCTS SLIDE  ===================   */}
-      <div className="relatedProducts">
-        {loadingCatProd ? (
-          <SlideProductLoading />
+      <PageTransition key={id}>
+        {/* // * ==================  PRODUCT DETAILS  ===================   */}
+        {loading ? (
+          <ProductDetailsLoading />
         ) : (
-          <SlideProduct
-            data={categoryProducts.products}
-            title={product.category}
-          />
+          <div className="item-details pt-40">
+            <div className="container grid grid-cols-1 ">
+              <div className="  grid grid-cols-1 lg:grid-cols-2 gap-11">
+
+              {/* // * ==================  IMGS COMPONENT  ===================   */}
+            
+                <ImgsProductDetails prd={product} />
+            
+
+              {/* // * ==================   IMGS COMPONENT  ===================   */}
+             
+                <ProductInfo prd={product} />
+             
+              </div>
+            </div>
+          </div>
         )}
-      </div>
-    </PageTransition>
+
+        {/* // * ==================  RELATED PRODUCTS SLIDE  ===================   */}
+        <div className="relatedProducts">
+          {loadingCatProd ? (
+            <SlideProductLoading />
+          ) : (
+            <SlideProduct
+              data={categoryProducts.products}
+              title={product.category}
+            />
+          )}
+        </div>
+      </PageTransition>
     </>
   );
 }

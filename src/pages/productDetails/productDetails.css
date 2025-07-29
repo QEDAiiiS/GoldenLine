@@ -6,7 +6,6 @@
   --color_heading: #353237;
   --border_color: #d6d6d6d5;
 }
-
 /* .item-details {
   padding: 50px 0;
 } */
@@ -57,7 +56,6 @@
   gap: 5px;
   margin: 15px 0;
 }
-
 .stars svg {
   fill: #f8d941;
   font-size: 20px;
@@ -74,24 +72,20 @@
 .details-item .desc {
   line-height: 1.5;
 }
-
 .details-item .stock {
   font-size: 20px;
   margin-top: 20px;
   color: var(--main_color);
 }
-
 .details-item .btn svg {
   font-size: 20px;
 }
-
 .details-item .icons {
   display: flex;
   gap: 10px;
   transition: 0.3s;
   margin: 20px 0;
 }
-
 .details-item .icons span {
   width: 40px;
   height: 40px;
@@ -103,23 +97,19 @@
   cursor: pointer;
   transition: 0.5s;
 }
-
 .icons .fav-icon.in-fav{
   background: var(--main_color);
 }
-
 .details-item .icons span:hover {
   background-color: var(--main_color);
   transform: scale(1.1);
 }
-
 .details-item .icons svg {
   transition: 0.3s;
 }
 .details-item .icons span:hover svg {
   fill: var(--white_color);
 }
-
 /* ? Add To Cart BTN */
 .details-item .btn.in-cart{
   background: transparent;
@@ -131,7 +121,6 @@
   height: 500px;
     border-radius: 5px;
 }
-
 .loading-item .details-item {
   height: 500px;
   padding-top: 50px;

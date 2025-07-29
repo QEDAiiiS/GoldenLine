@@ -52,7 +52,7 @@ export default function BtmHeader() {
     <div className="btm_header bg-[var(--main_color)]">
       <div className="container flex items-center justify-between">
 
-        <nav className="nav flex items-center gap-[50px] h-[50px]">
+        <nav className="nav flex items-center gap-[50px] h-[52px]">
 
     {/*  // * ==================  CATEGORY PART   ===================  */}
           <div className="category_nav w-[220px] h-[100%] relative">

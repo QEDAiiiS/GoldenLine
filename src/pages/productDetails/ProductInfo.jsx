@@ -56,7 +56,7 @@ export default function ProductInfo({ prd }) {
 
 // * ==================   JSX COMPONENT ELEMENTS  =================== 
   return (
-    <div className="details-item">
+    <div className="details-item w-full!">
       <div className="name">{prd.title}</div>
 
       <div className="stars">
@@ -79,7 +79,7 @@ export default function ProductInfo({ prd }) {
       </h5>
 
       <button
-        className={`btn ${isInCart ? "in-cart" : ""}`}
+        className={`p-2 w-35 rounded-4xl flex items-center justify-between btn ${isInCart ? "in-cart" : ""}`}
         onClick={() => handleAddToCart(prd)}
       >
         {isInCart ? "Item In Cart" : "Add To Cart"} <TiShoppingCart />

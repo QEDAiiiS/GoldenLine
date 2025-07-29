@@ -6,17 +6,13 @@
     --color_heading: #353237;
     --border_color: #d6d6d6d5;
   }
-
-
 .top_slide{
-    /* background-color: red; */
     position: relative;
     margin-bottom: 50px;
     border-bottom: 1px solid var(--border_color);
     padding: 15px 20px 20px 0;
     z-index: 2;
 }
-
 .top_slide::after{
     content: '';
     position: absolute;
@@ -26,15 +22,12 @@
     background: var(--main_color);
     z-index: 5;
 }
-
 .top_slide h2{
     font-size: 30px;
     color: var(--main_color);
     margin-bottom: 10px;
 }
-
-/* ! Product */
-
+/* !=================== Product ===================*/
 .product{
     background-color: var(--white_color);
     width: 240px;
@@ -46,14 +39,12 @@
     position: relative;
     overflow: hidden;
 }
-
 .product:hover{
     border-color: var(--main_color);
     transform: scale(1.05);
     box-shadow: 10px 10px 15px #9494943e;
     z-index: 10;  
 }
-
 .product .img-product{
     position: relative;
     height: 180px;
@@ -63,12 +54,10 @@
     justify-content: center;
     margin-bottom: 30px;
 }
-
 .product .img-product img{
     height: 160px;
     width: auto;
 }
-
 .product .name-product{
     margin-bottom: 10px;
     color: var(--color_heading);
@@ -79,18 +68,15 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
-
 .product .stars{
     margin: 15px 0;
     display: flex;
     gap: 5px;
 }
-
 .product .stars svg{
     fill: #f8d941;
     font-size: 18px;
 }
-
 .product .icons{
     display: flex;
     flex-direction: column;
@@ -101,11 +87,9 @@
     transform: translate(-50%);
     transition: 0.5s;
 }
-
 .product:hover .icons{
     right: 20px;
 }
-
 .product .icons span{
     width: 40px;
     height: 40px;
@@ -116,12 +100,10 @@
     border-radius: 100%;
     cursor: pointer;
 }
-
 .product.in-cart .icons .btn-addtocart{
     background-color: var(--main_color);
     pointer-events: none;
 }
-
 .icons .btn-addtofav.in-fav{
     background-color: var(--main_color);
 }
@@ -129,7 +111,6 @@
 .btn-addtofav.in-fav svg{
     fill: var(--white_color);
 }
-
 .product .status-cart{
     position: absolute;
     top: -30px;
@@ -142,11 +123,9 @@
     gap: 5px;
     color: #7b7b7b;
 }
-
 .product.in-cart .status-cart{
     top: 10px;
 }
-
 .product .status-cart svg{
     fill: rgb(31, 233, 65);
 }
@@ -161,7 +140,6 @@
     justify-content: center;
     padding-top: 20px;
 }
-
 .loading-slideProduct .top_slide{
     height: 105px;
 }
@@ -173,7 +151,6 @@
     height: 20px;
     width: 350px;
 }
-
 .products-loading{
     display: flex;
     gap: 30px;
@@ -186,8 +163,6 @@
     margin-bottom: 10px;
     border-radius: 5px;
 }
- 
-
 /* ? Toaster */
 .toast-wrapper{
     display: flex;
@@ -196,7 +171,6 @@
     gap: 20px;
     width: 300px;
 }
-
 .toast-wrapper img{
     width: auto;
     height: 70px;

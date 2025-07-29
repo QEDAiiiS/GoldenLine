@@ -1,6 +1,10 @@
+
+
+
+
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../../public/img/logo9.png";
+import Logo from "../../../public/img/logoo.png";
 import { FaRegHeart } from "react-icons/fa";
 import { TiShoppingCart } from "react-icons/ti";
 import { cartContext } from "../../contexts/CartContext";
@@ -32,8 +36,8 @@ export default function TopHeader() {
       <div className="container py-[15px]  flex justify-between items-center">
 
     {/* // * ==================  LOGO  =================== */}
-        <Link to={"/"} className=" w-[100px] flex items-center">
-          <img src={Logo} className=" rounded-2xl"/>
+        <Link to={"/"} className=" w-32 flex items-center">
+          <img src={Logo} className="rounded-2xl"/>
         </Link>
 
 
