@@ -64,7 +64,7 @@ export default function SearchBox() {
   // * ==================  COMPONENT ELEMENTS  ===================
   return (
     <>
-      <div className="search-box">
+      <div className="search-box hidden lg:block">
 
         {/* // * ==================  FORM INPUT   =================== */}
         <form

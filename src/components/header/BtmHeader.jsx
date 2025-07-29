@@ -85,7 +85,7 @@ export default function BtmHeader() {
           </div>
 
     {/*  // * ==================  NAV LINKS   ===================  */}
-          <div className="nav_links flex  h-[100%]">
+          <div className="nav_links lg:flex  h-[100%] hidden ">
             {navLinks.map((link) => (
               <Link
                 key={link.link}
